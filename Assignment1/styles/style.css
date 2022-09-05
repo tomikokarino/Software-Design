@@ -1,8 +1,15 @@
 body {
-  color: red;
+  color: black;
 }
 
 h1 {
-  color: red;
-  font-family: monospace;
+  color: #03fcba;
+  font-family: sans-serif;
+  size: 24pt
+}
+
+h2 {
+  color: #f578b2;
+  font-family: sans-serif;
+  size: 18pt;
 }

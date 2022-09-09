@@ -1,5 +1,6 @@
 body {
   color: black;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -13,3 +14,14 @@ h2 {
   font-family: sans-serif;
   size: 18pt;
 }
+
+#container {
+  margin: 50px 0;
+  /* background-color: blue; */
+}
+
+.txt {
+  color: red;
+}
+
+

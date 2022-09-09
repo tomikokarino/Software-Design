@@ -1,0 +1,1 @@
+<a href="https://www.freecounterstat.com" title="website hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=cldcqntag6sqfq52qw9gyugszyjcx5cl" border="0" title="website hit counter" alt="website hit counter"></a>

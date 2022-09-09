@@ -1,0 +1,97 @@
+body {
+  color: black;
+  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Quicksand', sans-serif; 
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+  height: 100%;
+  width: 100%;
+}
+
+#wrapper {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2%;
+  margin: auto;
+  border: solid 1px #ccc;
+}
+
+td#title {
+  text-align: center;
+}
+
+td#nav,
+td#main,
+td#side {
+  border-style: inset;
+  border-width:  3px;
+  padding: 0;
+  vertical-align: top;
+}
+
+td#nav,
+td#side {
+  width: 20%;
+}
+
+td#main {
+  width: 60%
+}
+
+td#main table {
+  border-collapse: separate;
+}
+
+
+.content-container {
+  margin: 5px;
+}
+
+td#title h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 42pt;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+h1 {
+  color: #03fcba;
+  font-family: sans-serif;
+  size: 24pt
+}
+
+h2 {
+  color: #f578b2;
+  font-family: sans-serif;
+  size: 18pt;
+}
+
+.welcome {
+  font-size: 24pt;
+  text-align: center;
+}
+
+.counter {
+  font-size: 20pt;
+  text-align: center;
+}
+
+#container {
+  margin: 50px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li:before {
+  content:"\2606";
+}

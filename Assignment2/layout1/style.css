@@ -1,0 +1,118 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: black;
+  width: 95%;
+  height: 100%;
+  padding: 0 2%;
+  margin: auto;
+  background-color: black;
+}
+
+#container {
+  width: 100%;
+  min-height: 800px;
+  background-color: white;
+}
+
+#header {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row nowrap;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: #ccc;
+  min-height: 60px;
+  box-shadow: 0px 3px 4px #ccc;
+  z-index: 3;
+}
+
+#main {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  min-height: 800px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+}
+
+.cell2 {
+  background-color: #555;
+}
+
+#title, 
+#nav,
+.cell {
+  flex: 1 50%; 
+}
+
+
+ #title p {
+  margin-left: 5%;
+ }
+
+
+#nav ul {
+  margin-left: 50%;
+  margin-top: 3%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  display: block;
+  margin-right: 10%;
+}
+
+
+/* ################################## */
+/*                 TEXT               */
+/* ################################## */
+
+#title {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#nav {
+  font-size: 16pt;
+  color: #666;
+}
+
+li a {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 48pt;
+}
+
+h2 {
+  font-size: 24pt;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 45px;
+}
+
+.cell2 p {
+  font-size: 18pt;
+  font-weight: 200;
+  color: white;
+}
+
+.purple {
+  color: #A485FB;
+}
+

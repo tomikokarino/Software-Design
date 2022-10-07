@@ -1,0 +1,268 @@
+/********************************************/
+/***************** Global *******************/
+/********************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100vw;
+  /* height: 800vh; */
+  margin: auto;
+  background-color: #fffceb;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  /* border: solid 1px red; */
+}
+
+.container {
+  background: transparent;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*******************************************/
+/******************* Title *****************/
+/*******************************************/
+
+#title {
+  width: 100%;
+  /* border: solid 1px black; */
+  /* background-color: white; */
+}
+
+#title .container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+  padding: 10% 3%;
+  /* border: solid 1px green; */
+}
+
+/* #title figure, #title div { border: solid 1px blue;} */
+
+#title figure {width: 40%;}
+#title div {width: 60%; background-color: #befaf0}
+
+.title {
+  position: relative;
+  padding: 15% 15%;
+  /* background-color: red; */
+}
+
+.title p {
+  background-color: #f7e872;
+  padding: 2%;
+  margin: 0;
+  text-align: center;
+}
+
+.title p#andy {
+  font-family: 'Euphoria Script', cursive;
+  font-size: 42pt;
+  width: 150px;
+}
+
+.title p#warhol {
+  transform: translate(45px,0);
+  font-family: 'Euphoria Script', cursive;
+  font-size: 42pt;
+  width: 200px;
+}
+
+.title p#drawings {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 42pt;
+  color: #f52702;
+  width: 300px;
+}
+
+/*************************************************/
+/************ Intro & Spring containers **********/
+/*************************************************/
+
+#intro .container,
+#spring .container,
+#laFin .container {
+position: relative;
+display: flex;
+flex-direction: row;
+width: 80%;
+margin: auto;
+}
+
+#intro {
+  padding: 5% 0;
+  background-color: pink;
+}
+
+#spring {
+  padding: 10% 0;
+}
+
+/*************************************************/
+/********************* Intro *********************/
+/*************************************************/
+
+#tapDancer {
+  position: relative;
+  width: 75%;
+  padding: 15%;
+}
+
+#tapDancer .text p {
+  background-color: #ffffff99;
+  padding: 5%;
+  margin: 0;
+  font-family: 'Cormorant Upright', serif;
+  font-size: 42pt;
+  font-style: italic;
+  font-weight: 700;
+}
+
+#tapDancer .text p.tapDancer {
+  transform: translate(80px, 0);
+}
+
+#photobooth {
+  position: sticky;
+  width: 25%;
+  /* border: solid 1px blue; */
+  
+}
+
+#photobooth img {
+  transform: rotate(10deg);
+  width: 120px;
+}
+
+
+/************************************************/
+/************** Favorite Smell ******************/
+/************************************************/
+
+#springImages {
+  position: relative;
+  /* border: solid 1px pink; */
+  width: 40%;
+}
+
+#springImages figure {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* border: solid 1px yellow; */
+}
+
+#springImages figure img {
+  width: 100%;
+}
+
+#springImages figure.is-active {
+  opacity: 1;
+}
+
+#favoriteSmell {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  /* padding-top: 25%; */
+  /* border: solid 1px green; */
+  width: 60%;
+  background-color: #9ed179;
+}
+
+#favoriteSmell.is-fixed {
+  position: fixed;
+}
+
+#favoriteSmell.is-bottom {
+  bottom: 0;
+  top: auto;
+}
+
+#favoriteSmell .text {
+  position: absolute;
+  /* left: 5%; */
+  /* top: 10%; */
+  /* border: solid 1px green; */
+  width: 100%;
+}
+
+#favoriteSmell .text p {
+  /* border: solid 1px orange; */
+  margin: 0;
+  font-family: 'Cormorant Upright', serif;
+  font-size: 32pt;
+  font-style: italic;
+  text-align: center;
+  /* padding-top: 7%; */
+}
+
+#favoriteSmell .text p.favorite-smell {
+  /* border: solid 1px blue; */
+  background-color: #facfe0cc;
+  transform: translate(60px,25px);
+  width: 600px;
+  height: 120px;
+  padding-top: 5%;
+}
+
+#favoriteSmell .text p.smell-of-spring {
+  /* border: solid 1px red; */
+  background-color: #f7e872cc;
+  transform: translate(20px, 0);
+  width: 600px;
+  height: 100px;
+  padding-top: 3%;
+}
+
+#favoriteSmell .text p.in-NY {
+  /* border: solid 1px yellow; */
+  background-color: #cfecfacc;
+  transform: translate(120px, -15px);
+  width: 550px;
+  height: 110px;
+  padding-top: 4%;
+}
+
+
+/************************************************/
+/******************** La Fin ********************/
+/************************************************/
+
+/* #laFin .container{border: solid 1px red;} */
+
+#laFin .container article {
+  /* width: 25%; */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+#laFin .container article p {
+  font-family: 'Euphoria Script', cursive;
+  font-size: 48pt;
+}
+
+#laFin .container figure {
+  width: 100%;
+  /* border: solid 1px blue; */
+}
+
+#laFin .container figure img {
+  width: 1200px;
+  /* border: solid 1px orange; */
+}

@@ -5,11 +5,11 @@
 
 const slideShowModal = document.getElementById('slideShowModal')
 // <div id="slideShowModal"> gets console logged only once here
-console.log(slideShowModal)
+console.log('slideShowModal before eventlistener', slideShowModal)
 
 slideShowModal.addEventListener('show.bs.modal', event => {
   // but here <div id="slideShowModal"> gets console logged twice
-  console.log(slideShowModal)
+  console.log('slideShowModal after eventlistener', slideShowModal)
   // Image that triggered the modal
   const thumbnail = event.relatedTarget
   // Extract info from data-bs-* attributes
@@ -18,7 +18,7 @@ slideShowModal.addEventListener('show.bs.modal', event => {
     let slideIndex = 1;
 
     showSlides(slideIndex);
-    console.log(slideIndex)
+    // console.log(slideIndex)
     
     function plusSlides(n) {  
       showSlides(slideIndex += n);
@@ -58,11 +58,11 @@ slideShowModal.addEventListener('show.bs.modal', event => {
 
 const videoModal = document.getElementById('videoModal')
 // <div id="videoModal"> gets console logged once
-console.log(videoModal)
+console.log('videoModal before eventlistener', videoModal)
 
 videoModal.addEventListener('show.bs.modal', play => {
   // Here <div id="videoModal"> gets console logged twice
-  console.log(videoModal)
+  console.log('videoModal after eventlistener', videoModal)
  // Image that triggered the modal
  const videoThumb = play.relatedTarget
  // Extract info from data-bs-* attributes
@@ -90,10 +90,10 @@ videoModal.addEventListener('show.bs.modal', play => {
 
 const scratchModal = document.getElementById("scratchOffModal")
 // <div id="scratchOffModal"> gets console logged once
-console.log(scratchModal)
+console.log('scratchModal before eventListener', scratchModal)
 scratchModal.addEventListener('show.bs.modal', scratch => {
 // <div id="scratchOffModal"> gets console logged twice
-console.log(scratchModal)
+console.log('scratchModal after eventListener', scratchModal)
 
   const scratchThumb = scratch.relatedTarget
   let imgSRC = scratchThumb.getAttribute('data-bs-imgSRC')

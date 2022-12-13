@@ -4,10 +4,11 @@
 /**********************************************************/
 
 /* .slides {display: none; border: solid 1px blue;} */
-#pets, #arts, #food {display: none;}
+#pets, #arts, #food,
+#croatia, #halloween {display: none;}
 
   /* Next & previous buttons */
-.prev, .next {
+#prev, #next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -23,13 +24,37 @@
 }
 
 /* Position the "next button" to the right */
-.next {
+#next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+#prev:hover, #next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.mysteryBox {
+  width: 250px;
+  height: 332px;
+  color: white;
+  text-align: center;
+  padding-top: 125px;
+  font-size: 32pt;
+}

@@ -1,24 +1,23 @@
+/***********************************************************************************/ 
+/******************************** Bootstrap 5 Modal ********************************/ 
+/*************** https://getbootstrap.com/docs/5.2/components/modal/ ***************/
+/***********************************************************************************/
+
+
+
 /**********************************************************************************/
 /*********************************** Slideshow ************************************/
 /*** Tweaked this code:  https://www.w3schools.com/howto/howto_js_slideshow.asp ***/ 
 /**********************************************************************************/
 
 const slideShowModal = document.getElementById('slideShowModal')
-// <div id="slideShowModal"> gets console logged only once here
-console.log('slideShowModal before eventlistener', slideShowModal)
-
 slideShowModal.addEventListener('show.bs.modal', event => {
-  // but here <div id="slideShowModal"> gets console logged twice
-  console.log('slideShowModal after eventlistener', slideShowModal)
-  // Image that triggered the modal
   const thumbnail = event.relatedTarget
-  // Extract info from data-bs-* attributes
   const sliderType = thumbnail.getAttribute('data-bs-type')
   
     let slideIndex = 1;
 
     showSlides(slideIndex);
-    // console.log(slideIndex)
     
     function plusSlides(n) {  
       showSlides(slideIndex += n);
@@ -34,10 +33,18 @@ slideShowModal.addEventListener('show.bs.modal', event => {
         let i;
         let slideType = document.getElementById(sliderType);
         let thisSlide = slideType.getElementsByClassName("slides");
-                
+        
+        /*** Thank you Omar! ***/ 
+        let existingSlides = document.querySelectorAll('.slides');
+        if (existingSlides) {
+          existingSlides.forEach((slide) => {
+            slide.style.display = 'none';
+          })
+        }
+
         if (slideType.id === sliderType) { 
           slideType.style.display = "block";
-            // console.log(slideIndex)
+            
             if (n > thisSlide.length) {slideIndex = 1}    
             if (n < 1) {slideIndex = thisSlide.length}
               for (i = 0; i < thisSlide.length; i++) {
@@ -57,15 +64,11 @@ slideShowModal.addEventListener('show.bs.modal', event => {
 /*****************************************************************/  
 
 const videoModal = document.getElementById('videoModal')
-// <div id="videoModal"> gets console logged once
-console.log('videoModal before eventlistener', videoModal)
 
 videoModal.addEventListener('show.bs.modal', play => {
-  // Here <div id="videoModal"> gets console logged twice
-  console.log('videoModal after eventlistener', videoModal)
- // Image that triggered the modal
+
  const videoThumb = play.relatedTarget
- // Extract info from data-bs-* attributes
+ 
  const videoType = videoThumb.getAttribute('data-bs-type');
  const videoSRC = videoThumb.getAttribute('data-videoSRC');
  const videoSRCauto = videoSRC + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
@@ -84,22 +87,26 @@ videoModal.addEventListener('show.bs.modal', play => {
   
 })
 
-/***************************************************************************/
-/*************************** ScratchOff image ******************************/ 
-/***************************************************************************/
+/*****************************************************************************/
+/*************************** ScratchOff image ********************************/ 
+/* Tweaked this code: https://editor.p5js.org/BarneyCodes/sketches/syVZZiBHk */
+/*****************************************************************************/
 
 const scratchModal = document.getElementById("scratchOffModal")
-// <div id="scratchOffModal"> gets console logged once
-console.log('scratchModal before eventListener', scratchModal)
 scratchModal.addEventListener('show.bs.modal', scratch => {
-// <div id="scratchOffModal"> gets console logged twice
-console.log('scratchModal after eventListener', scratchModal)
 
   const scratchThumb = scratch.relatedTarget
-  let imgSRC = scratchThumb.getAttribute('data-bs-imgSRC')
   let topLayerBackground = scratchThumb.getAttribute('data-bs-background')
   let topLayer;
-  
+
+  let existingCanvases = document.querySelectorAll('.p5Canvas');
+        
+          if (existingCanvases) {
+            existingCanvases.forEach((canvas) => {
+              canvas.style.display = 'none';
+            });
+          }
+
   const scratchIMG = function(sketch) {
 
    sketch.preload = function() {
@@ -107,27 +114,41 @@ console.log('scratchModal after eventListener', scratchModal)
       let img = sketch.loadImage(scratchThumb.getAttribute('data-bs-imgSRC'))
 
       sketch.setup = function() {
-        sketch.createCanvas(250, 332)
-        topLayer = sketch.createGraphics(250, 332)
+        sketch.createCanvas(700, 930)
+        topLayer = sketch.createGraphics(700, 930)
         topLayer.background(topLayerBackground);
-        topLayer.text("scratch me", 100, 150);
-        topLayer.strokeWeight(50);
+        topLayer.textSize(75);
+        topLayer.textAlign(sketch.CENTER);
+        topLayer.text("scratch me!", 325, 465);
+        topLayer.strokeWeight(100);
         topLayer.blendMode(sketch.REMOVE); 
-      };
+
+
+        let existingCanvases = document.querySelectorAll('.p5Canvas');
+          if (existingCanvases) {
+            existingCanvases.forEach((canvas, index) => {
+              for (i = 0; i < existingCanvases.length; i++) {
+                if(index==[i]) {
+                  canvas.style.display = 'block';
+                } else {
+                  canvas.style.display = 'none';
+                }
+              }
+            });
+          }
+        }
+
   
       sketch.draw = function() {
-        sketch.image(img, 0, 0, 250, 332);
-
-        if(sketch.mouseIsPressed) {
+        sketch.image(img, 0, 0, 700, 930);
+         if(sketch.mouseIsPressed) {
           topLayer.line(sketch.pmouseX, sketch.pmouseY, sketch.mouseX, sketch.mouseY)
         }
-      
-        sketch.image(topLayer, 0,0, 250, 332);
+        sketch.image(topLayer, 0,0, 700, 930);
       };
     };
-    
+
   };
   let newScratch = new p5(scratchIMG, document.getElementById("scratch-content"));
-
+ 
 })
-

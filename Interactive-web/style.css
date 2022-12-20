@@ -1,6 +1,23 @@
+body {
+  font-family: 'Source Serif Pro', serif;
+  background-color: #fc0303;
+  padding: 0;
+}
+
+.container-xl {
+  background-color: white;
+  margin-top: 5%;
+}
+
+#intro {
+  padding-top: 5%;
+  margin-bottom: 5%;
+  color: #737170;
+}
+
+
 /**********************************************************/
 /********************* Slideshow styles *******************/
-/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
 /**********************************************************/
 
 /* .slides {display: none; border: solid 1px blue;} */
@@ -34,27 +51,25 @@
   background-color: rgba(0,0,0,0.8);
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.slides img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+/**********************************************************/
+/***************** ScratchOff image styles ****************/
+/**********************************************************/
 
-
-.mysteryBox {
-  width: 250px;
-  height: 332px;
+.scratchOff {
+  font-size: 32pt;
   color: white;
   text-align: center;
-  padding-top: 125px;
-  font-size: 32pt;
+  padding-top: 50%;
+}
+
+#scratch-content canvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
